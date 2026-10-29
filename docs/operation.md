@@ -18,6 +18,9 @@ The kWeld picks its mode from the pedal at the moment it is connected to power:
 - Pedal pressed (or the jack shorted by having no plug): automatic mode. Touching the electrodes
   to the work triggers the pulse.
 
+Plug the pedal in, and keep it released, before applying power. With the jack empty (see
+[build.md](build.md)) the unit starts in automatic mode.
+
 Keenlab operating manual, "Using the welder", "Using manual mode" and "Using automatic mode".
 Start in manual mode until the system is calibrated and trusted.
 

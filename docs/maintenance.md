@@ -13,9 +13,14 @@ every manual, firmware or model file they link against `keenlab.manifest`. It re
 - `CHANGED <url>`: a listed file has different contents.
 - `MISSING <url>` or `UNREACHABLE <url>`: a download failed.
 
-Exit 1 means something needs a look. To accept a new or changed file, download it, record its
-`shasum -a 256`, and edit `keenlab.manifest`. Keep the manifest in step with the docs that cite
-manual revisions.
+Exit 1 means something needs a look. To accept a new or changed file, download it and append
+its line to `keenlab.manifest`:
+
+```sh
+printf '%s  %s\n' "$(shasum -a 256 FILE | cut -d ' ' -f 1)" URL >> keenlab.manifest
+```
+
+Keep the manifest in step with the docs that cite manual revisions.
 
 State as of 2026-10-29: firmware r2.9 is current (the download is byte-identical to a copy from
 2023); Keenlab republished all four manuals on 2026-10-27 (kWeld assembly r6.0, kWeld operating

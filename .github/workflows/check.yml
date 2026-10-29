@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 jobs:
-  check:
+  shellcheck:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -15,5 +15,12 @@ jobs:
           persist-credentials: false
       - name: shellcheck
         run: shellcheck scripts/keenlab.sh
+  keenlab:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
       - name: Check Keenlab documents
         run: sh scripts/keenlab.sh check

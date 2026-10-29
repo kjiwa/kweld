@@ -21,6 +21,10 @@ _cleanup() {
   fi
 }
 
+_curl() {
+  curl --connect-timeout 15 --max-time 120 -fsSL "$@"
+}
+
 _usage() {
   echo "usage: keenlab.sh fetch|check" >&2
   exit 2
@@ -51,9 +55,10 @@ _fetch_one() {
     echo "present $_fetch_one_dest"
     return 0
   fi
-  curl -fsSL -o "$_fetch_one_dest" "$_fetch_one_url"
+  _curl -o "$_fetch_one_dest" "$_fetch_one_url"
   if [ "$(_sha256 "$_fetch_one_dest")" != "$_fetch_one_sum" ]; then
-    echo "checksum mismatch: $_fetch_one_dest" >&2
+    rm -f "$_fetch_one_dest"
+    echo "checksum mismatch, removed: $_fetch_one_dest" >&2
     return 1
   fi
   echo "fetched $_fetch_one_dest"
@@ -69,7 +74,7 @@ cmd_fetch() {
 _check_checksums() {
   while read -r _check_checksums_sum _check_checksums_url; do
     _check_checksums_file="$WORK_DIR/$(basename "$_check_checksums_url")"
-    if ! curl -fsSL -o "$_check_checksums_file" "$_check_checksums_url"; then
+    if ! _curl -o "$_check_checksums_file" "$_check_checksums_url"; then
       _report MISSING "$_check_checksums_url"
     elif [ "$(_sha256 "$_check_checksums_file")" != "$_check_checksums_sum" ]; then
       _report CHANGED "$_check_checksums_url"
@@ -79,7 +84,7 @@ _check_checksums() {
 
 _check_page() {
   _check_page_file="$WORK_DIR/page.html"
-  if ! curl -fsSL -o "$_check_page_file" "$1"; then
+  if ! _curl -o "$_check_page_file" "$1"; then
     _report UNREACHABLE "$1"
     return 0
   fi
