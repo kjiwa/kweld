@@ -24,3 +24,6 @@ jobs:
           persist-credentials: false
       - name: Check Keenlab documents
         run: sh scripts/keenlab.sh check
+
+  privacy:
+    uses: kjiwa/.github/.github/workflows/privacy.yml@main
