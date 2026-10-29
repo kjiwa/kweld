@@ -33,7 +33,9 @@ The unit ships uncalibrated and shows CAL until calibrated; calibrate before the
 again after changing electrodes or cables. Operating manual, "Calibration".
 
 The kSupply must be set to the right charge voltage for the kCap revision before the kCap is
-connected: kSupply manual, "Setting output voltage and current"; kCap manual, "Operation guide".
+connected: kSupply manual, "Setting output voltage and current"; kCap manual, "Specifications".
+For a kCap r6 the table gives 8.4 V minimum and 8.5 V recommended; the module disconnects the
+charger itself at about 8.4 V.
 Use a plastic screwdriver and turn the trimmers gently. Do not turn the current trimmer fully
 counterclockwise.
 

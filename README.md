@@ -10,11 +10,13 @@ maintain it after a long gap.
 
 ## Status
 
-- Case: Printables 1443318 files are vendored unmodified; no part has been printed yet.
+- Case: [Printables 1443318](https://www.printables.com/model/1443318) files are vendored
+  unmodified; no part has been printed yet.
 - System: assembled on the bench, never used. Calibration, first weld and the fan hookup are
   still to do.
-- Not verified yet: board revisions, the boot-screen firmware version, the pedal plug type, the
-  fan connection. [docs/maintenance.md](docs/maintenance.md) lists what to read off the hardware.
+- Boards: kWeld r3.3, kCap r6, kSupply r6; all covered by Keenlab's current manuals
+  ([docs/maintenance.md](docs/maintenance.md)).
+- Not verified yet: the boot-screen firmware version, the pedal plug type, the fan connection.
 
 ## The system
 
@@ -25,7 +27,8 @@ maintain it after a long gap.
 - Foot pedal: triggers welds in manual mode.
 - kWeld firmware update tool (Keenlab calls it the programmer module): USB-serial adapter, used
   only to flash firmware.
-- Case: Printables 1443318.
+- Case: [Printables 1443318](https://www.printables.com/model/1443318), a remix of
+  [Printables 928957](https://www.printables.com/model/928957).
 
 ## Documents
 
