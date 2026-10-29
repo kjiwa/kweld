@@ -68,11 +68,14 @@ Hardware, all M3. The totals match: 47 screws and 47 inserts.
 
 Electrical and other:
 
-- [ ] Lit pushbutton switch, 16 mm panel mount. The case hole is 16.5 mm and the printed wrench
-  fits a nut of about 19 mm across flats, so a 16 mm switch with a 19 mm nut. It switches the
-  kSupply's PSU enable line, which the kSupply manual describes as a jumper or a switch, so a
-  latching (maintained) type is the one you want. Its LED runs from the kSupply output, 8.4 V
-  or more, so choose a 12 V LED version. These two points are inferred, not confirmed upstream.
+- [ ] Lit pushbutton switch, 16 mm. The case hole is 16.5 mm and the printed wrench fits a nut
+  of about 19 mm across flats, so buy the 16 mm size, not 19 or 22 mm. It switches the kSupply's
+  PSU enable line, which the kSupply manual describes as a jumper or a switch, so it must be
+  latching. Chosen: a stainless, IP67, latching, 1NO switch with a 5 to 24 V LED, 20 A contacts
+  and a plug-in wire socket, 16 mm panel cut. The LED range covers the kSupply output (8.4 V or
+  more). Colour is cosmetic. The listing gives an item length of 3.9 in; that likely includes the
+  plug and wires, but check the depth behind the front panel when test-fitting. That it switches
+  the enable line is inferred from the upstream notes, not confirmed.
 - [ ] Pedal jack Switchcraft 142AX and plug 750, or whatever matches your pedal's plug. Not yet
   checked.
 - [ ] 120 mm fan and grille. Your Corsair SP120 Elite is 12 V and 0.3 A, inside the kCap's 500 mA
