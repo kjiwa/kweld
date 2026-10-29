@@ -1,12 +1,47 @@
 # Build
 
-Everything here applies to Printables 1443318. The upstream page has the author's photos and
-assembly notes; this page records the choices and checks specific to this build.
+Everything here applies to [Printables 1443318](https://www.printables.com/model/1443318). The
+upstream page has the author's photos, assembly notes and comments; this page records the choices
+and checks specific to this build.
+
+## Layout and heat
+
+Judged from the author's photos and two makers' photos (one with the boards installed, one
+mid-print), not from the 3MF geometry. Confirm during assembly.
+
+- The long left section is the tall one. The kCap board lies on its top deck with the six
+  capacitor cells standing up through it; the fan shroud sits directly over the cells and the fan
+  on top of that. The kSupply is below the kCap board, with its heatsink, and the HP power supply
+  slides in from the rear into the lower part of the left and right sections.
+- The right section holds the kWeld under the angled cover: LCD, dial, and the two electrode
+  cables out of the angled end. The power button and the nameplate are on the lower front.
+- The side slots next to the fan shroud open onto the kCap board's terminals, so air can move
+  through the kCap compartment. Which way the fan blows is not specified upstream; the author and
+  two makers all used different fans. Pick a direction, measure (below), and flip it if needed.
+
+Where the heat is, and what the fan does:
+
+- The capacitors are the part that matters. They are rated 70 C, and the kCap lights its
+  overtemperature LED at about 45 C. The kCap runs its fan from its own fan connector and starts
+  it at about 45 C, so the fan exists to cool the cells directly. Keenlab's quoted repetition rate
+  (50 J pulses once every 2 seconds) assumes that fan fitted. Without a fan, expect to take
+  cooling breaks.
+- The HP power supply has its own fans and its rear faces the open rear bay, so most of its heat
+  leaves the case there. It still warms the case floor and the air below the kSupply.
+- The kWeld's power switch is the least stressed: its resistance is a small fraction of the
+  kCap's, so it heats much less per pulse. It locks welding out at 70 C and shows the temperature
+  on its status screen.
+
+Expect modest temperatures for light use, but this is reasoning, not measurement. Measure on the
+first session: the kWeld status screen for its switch, the kCap overtemperature LED, and a probe
+or infrared thermometer on the case near the capacitors and the supply.
 
 ## Parts
 
 Printed, in `models/printables-1443318/`. Sizes are the 3MF bounding boxes, in print orientation,
-in mm (x, y, z). The printer here is a Prusa MK3S+ (250 x 210 x 210), so every part fits.
+in mm (x, y, z). The printer here is a Prusa MK3S+ (250 x 210 x 210), so every part fits. The
+photos suggest the two "Top" parts are the covers (kCap and kWeld) and the two "Bottom" parts the
+base with the power supply bay and front panel.
 
 - kWeldCase_BottomLeft: 134 x 108 x 180
 - kWeldCase_BottomRight: 134 x 141 x 131
@@ -17,29 +52,58 @@ in mm (x, y, z). The printer here is a Prusa MK3S+ (250 x 210 x 210), so every p
 - kWeldCase_Nameplate: 110 x 32 x 3
 - kWeldCase_PowerButton_Wrench: 34 x 34 x 60
 
-Bought, from the upstream BOM:
+### Parts checklist
 
-- M3 heat-set inserts, 47.
-- M3 flat-head screws, 16 x 6 mm (top and left/right joint), 5 x 8 mm, 4 x 10 mm (feet),
-  2 x 12 mm (kSupply bracket); M3 button-head 6 mm, 16 (PCBs to case).
-- M3 x 30 socket-head screws with washers, 4, for the fan and its grille.
-- 120 mm fan and grille. The kCap fan connector is temperature controlled and limited to 500 mA;
-  Keenlab recommends the Scythe SY1225SL12SH. Whether the Corsair SP120 Elite meets that limit
-  and connector is not verified.
-- Lit pushbutton switch, Switchcraft 142AX jack and 750 plug for the pedal, four rubber feet,
-  hookup wire, ferrules and ring terminals.
+Counts are the upstream author's; the upstream page is authoritative. Tick what you have.
 
-Upstream lists the screw counts in the author's own words; check the page for the current list.
+Hardware, all M3. The totals match: 47 screws and 47 inserts.
+
+- [ ] Heat-set inserts, 47. Any that fit a 4 mm hole and are 5 to 6 mm long.
+- [ ] Flat-head, 16 x 6 mm (top and left/right joint).
+- [ ] Flat-head, 5 x 8 mm (left side).
+- [ ] Flat-head, 4 x 10 mm (feet).
+- [ ] Flat-head, 2 x 12 mm (kSupply bracket).
+- [ ] Button-head, 16 x 6 mm (boards to case).
+- [ ] Socket-head, 4 x 30 mm, with 4 washers (fan and grille).
+
+Electrical and other:
+
+- [ ] Lit pushbutton switch, 16 mm panel mount. The case hole is 16.5 mm and the printed wrench
+  fits a nut of about 19 mm across flats, so a 16 mm switch with a 19 mm nut. It switches the
+  kSupply's PSU enable line, which the kSupply manual describes as a jumper or a switch, so a
+  latching (maintained) type is the one you want. Its LED runs from the kSupply output, 8.4 V
+  or more, so choose a 12 V LED version. These two points are inferred, not confirmed upstream.
+- [ ] Pedal jack Switchcraft 142AX and plug 750, or whatever matches your pedal's plug. Not yet
+  checked.
+- [ ] 120 mm fan and grille. Your Corsair SP120 Elite is 12 V and 0.3 A, inside the kCap's 500 mA
+  limit. It has a 4-pin PWM plug and the kCap fan header looks like a small 3-pin one in the
+  maker's photo; check the pitch and whether your kCap kit included a fan cable.
+- [ ] Four rubber feet (upstream: Keystone 722).
+- [ ] Hookup wire, ferrules and ring terminals for the switch and jack; a crimper. The author
+  shortened the 8 AWG cables and crimped new terminals.
+- [ ] A knob for the kWeld dial, if the stock one does not fit the case: it did not for one
+  maker. A printable "16mm wide rotary encoder knob" is Printables 1504384; fit unverified.
+- [ ] Cyanoacrylate gel for the nameplate.
+
+Things makers reported on the Printables page:
+
+- The ring terminals joining the kSupply and kCap stick out the back with no clearance. One
+  maker planned to cut the back of the case; the author's answer is not posted.
+- A supply can shut down on inrush when first connected to the kCap. The kSupply manual
+  ("Setting output voltage and current") says to set the current limit before connecting the
+  kCap, and to lower it for a weaker supply.
+- PETG shrinks; one maker adjusted for it.
 
 ## Printing
 
-- Material: PETG for BottomLeft, BottomRight, TopRight and FanShroud; PLA for the rest. The
-  kWeld stops welding when its power switch passes 70 C, so the surrounding air can exceed PLA's
-  softening point of roughly 55 to 60 C. Which of those parts sits nearest the heat sources has
-  not been checked against the assembled case; revisit the split after the first test session.
-- PLA softens and creeps rather than failing suddenly, so a PLA part that warps is reprintable,
-  not dangerous. Prusament PETG V0 is UL 94 V-0 certified, but only when printed on an MK3S+,
-  MK4 or XL with Prusa's approved profiles, and it costs more; use it if a flame rating matters.
+- Material: PETG for BottomLeft, BottomRight, TopLeft and FanShroud; PLA for TopRight, the
+  nameplate, the wrench and the bracket. The warm parts are the ones around the capacitors and
+  the power supply (see above); the kWeld cover, TopRight, stays cool. The 70 C kWeld lockout and
+  the kCap's 45 C overtemperature LED mean air near the cells can pass PLA's softening point of
+  roughly 55 to 60 C.
+- PLA softens and creeps rather than failing suddenly, so a warped PLA part is reprintable, not
+  dangerous. Prusament PETG V0 is UL 94 V-0 certified, but only when printed on an MK3S+, MK4 or
+  XL with Prusa's approved profiles, and it costs more; use it if a flame rating matters.
 - The upstream author printed on a CORE One at 0.25 mm and 15 percent infill. MK3S+ settings
   here are unverified: slice first for filament totals (solid volume of all parts is 1.7 L, an
   upper bound), and print supports where the upstream notes say they are needed.

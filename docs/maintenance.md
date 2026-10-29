@@ -33,12 +33,18 @@ Read the revision printed on each board and record it here. Keenlab's current do
 - kWeld: hardware revisions 3 to 3.3 (assembly manual r6.0). Revision 2 differs; see the manual.
 - kCap: the manual was written for revision 4; current modules are revision 6, and the manual
   notes differences by revision.
-- kSupply: revision 5.
+- kSupply: revisions 5 and 6.
 
-Owned revisions: not read yet.
+Owned (printed on each board; date code after the slash is year and month):
 
-Hardware upgrades: none were found on the four Keenlab product pages as of 2026-10-29. That is
-not evidence that none exist; ask Keenlab, or check the endless-sphere and EEVblog kWeld threads.
+- kWeld r3.3 / 1810
+- kCap r6 / 2010: the current module, with Skeleton SkelCap capacitors.
+- kSupply r6 / 1907: adds an input overvoltage protector over r5.
+
+All three are covered by the current Keenlab manuals, so nothing is out of date and there is no
+upgrade to make. Hardware upgrades: none were found on the four Keenlab product pages as of
+2026-10-29. That is not evidence that none exist; ask Keenlab, or check the endless-sphere and
+EEVblog kWeld threads.
 
 ## Firmware
 
