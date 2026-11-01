@@ -11,7 +11,7 @@ maintain it after a long gap.
 ## Status
 
 - Case: [Printables 1443318](https://www.printables.com/model/1443318) files are vendored
-  unmodified; no part has been printed yet.
+  unmodified; printing on a Prusa MK3S+ is in progress.
 - System: assembled on the bench, never used. Calibration, first weld and the fan hookup are
   still to do.
 - Boards: kWeld r3.3, kCap r6, kSupply r6; all covered by Keenlab's current manuals

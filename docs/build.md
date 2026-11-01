@@ -58,7 +58,10 @@ Counts are the upstream author's; the upstream page is authoritative. Tick what 
 
 Hardware, all M3. The totals match: 47 screws and 47 inserts.
 
-- [ ] Heat-set inserts, 47. Any that fit a 4 mm hole and are 5 to 6 mm long.
+- [ ] Heat-set inserts, 47: Ruthex RX-M3x5.7 (4.6 mm outer diameter, 5.7 mm long). The upstream
+  link, ASIN B08BCRZZS3, was this part but now opens a 1/4-20 insert listing; neither M3 option in
+  its dropdown is this insert. RX-M3Sx4.0 has the same diameter but is 4.0 mm long, so it grips
+  less thread. RX-M3x5x4 (VORON) is 5.0 mm across, too wide for the 4.0 mm holes.
 - [ ] Flat-head, 16 x 6 mm (top and left/right joint).
 - [ ] Flat-head, 5 x 8 mm (left side).
 - [ ] Flat-head, 4 x 10 mm (feet).
@@ -97,6 +100,128 @@ Things makers reported on the Printables page:
   kCap, and to lower it for a weaker supply.
 - PETG shrinks; one maker adjusted for it.
 
+### Heat-set inserts
+
+Upstream does not say where the inserts go. These holes were found by slicing the 3MF meshes, not
+from upstream, so treat them as measured but unconfirmed until test-fit. The parent model, Printables
+928957, lists 25 inserts; this remix lists 47.
+
+Hole sizes: 4.37 mm and 4.00 mm, mostly 5 to 8 mm deep, a few 13 to 14 mm. Ruthex's table for RX-M3x5.7 lists D1 4.6, D2 3.9,
+D3 4.0, L 5.7, W 1.6 without naming the columns; D3 as the hole size is inferred. BottomLeft 22 and 26 are only 5.0 mm deep and 4 and 5 are 5.8 mm, so a 5.7 mm insert
+will not sit flush in them: test-fit, or use the shorter RX-M3Sx4.0 there. Press an insert in
+flush with the surface, no deeper: inserts at the bottom-part joint pushed too far block the power
+supply from sliding in and out.
+
+38 of the 47 are located: BottomLeft 26, BottomRight 10, bracket 2. The upstream hardware list
+implies 21 for the top and joints, 4 feet, 2 bracket, 16 boards and 4 fan. Located and paired to a
+screw: 20 of the 21 top and joint inserts, and the 2 bracket inserts. The other 16 located holes
+are board or fan candidates, listed under "Which screw goes where". Not found: 1 top or joint, the 4
+feet, and 4 board or fan inserts, 9 in all.
+
+The fan shroud's four 4.1 mm holes run through the part. Whether the fan screws thread into inserts
+there or into BottomLeft 19, 20, 23 and 24 is not determined.
+
+Each image shows the part in its 3MF print orientation (z up, bed at z = 0), with every located
+hole numbered. Positions below are mm from the part's minimum x, y and z corner. Axis is the
+direction the hole points along.
+
+#### BottomLeft, 26
+
+![BottomLeft insert holes and support regions](images/BottomLeft.png)
+
+| # | Dia | Axis | Depth | x, y, z |
+|---|-----|------|-------|---------|
+| 1 | 4.37 | x | 6.8 | 8, 63, 7 |
+| 2 | 4.37 | x | 6.8 | 8, 98, 7 |
+| 3 | 4.37 | y | 6.0 | 22, 101, 7 |
+| 4 | 4.37 | y | 5.8 | 67, 101, 7 |
+| 5 | 4.37 | y | 5.8 | 112, 101, 7 |
+| 6 | 4.37 | x | 6.8 | 126, 53, 7 |
+| 7 | 4.38 | x | 6.8 | 126, 98, 7 |
+| 8 | 4.38 | z | 7.4 | 40, 44, 156 |
+| 9 | 4.38 | z | 7.4 | 105, 44, 156 |
+| 10 | 4.37 | y | 6.8 | 20, 104, 160 |
+| 11 | 4.37 | y | 6.8 | 114, 104, 160 |
+| 12 | 4.37 | y | 7.0 | 49, 98, 174 |
+| 13 | 4.37 | y | 7.0 | 116, 98, 174 |
+| 14 | 4.37 | z | 8.0 | 6, 63, 176 |
+| 15 | 4.37 | z | 8.0 | 6, 103, 176 |
+| 16 | 4.37 | z | 8.0 | 67, 103, 176 |
+| 17 | 4.37 | z | 8.0 | 130, 48, 176 |
+| 18 | 4.37 | z | 8.0 | 130, 103, 176 |
+| 19 | 4.00 | y | 13.0 | 14, 33, 41 |
+| 20 | 4.00 | y | 13.0 | 120, 33, 41 |
+| 21 | 4.00 | x | 6.8 | 126, 8, 67 |
+| 22 | 4.00 | x | 5.0 | 7, 46, 75 |
+| 23 | 4.00 | y | 13.0 | 14, 33, 146 |
+| 24 | 4.00 | y | 13.0 | 120, 33, 146 |
+| 25 | 4.00 | x | 6.8 | 126, 8, 149 |
+| 26 | 4.00 | x | 5.0 | 7, 46, 160 |
+
+#### BottomRight, 10
+
+![BottomRight insert holes](images/BottomRight.png)
+
+| # | Dia | Axis | Depth | x, y, z |
+|---|-----|------|-------|---------|
+| 1 | 4.37 | y | 7.0 | 20, 138, 20 |
+| 2 | 4.37 | y | 7.0 | 114, 138, 20 |
+| 3 | 4.00 | x | 6.8 | 127, 41, 21 |
+| 4 | 4.00 | x | 6.8 | 8, 79, 22 |
+| 5 | 4.00 | x | 6.8 | 127, 41, 103 |
+| 6 | 4.00 | x | 6.8 | 8, 79, 107 |
+| 7 | 4.0 | angled | 14.2 | 108, 32, 20 |
+| 8 | 4.0 | angled | 13.0 | 25, 80, 21 |
+| 9 | 4.0 | angled | 12.8 | 25, 80, 96 |
+| 10 | 4.0 | angled | 14.2 | 108, 32, 101 |
+
+The four angled holes (7 to 10) form an 83 x 76 mm rectangle on the angled end. That matches a board
+mounting pattern, probably the kWeld's. Their diameter is computed from an oblique section, so
+treat 4.0 as approximate.
+
+#### kSupply bracket, 2
+
+![kSupply bracket](images/kSupplySupportBracket.png)
+
+| # | Dia | Axis | Depth | x, y, z |
+|---|-----|------|-------|---------|
+| 1 | 4.38 | z | 8.0 | 8, 3, 4 |
+| 2 | 4.38 | z | 8.0 | 73, 3, 4 |
+
+#### Which screw goes where
+
+Each insert pairs with a clearance hole in a mating part at the mirrored position. Mirror sums were
+checked against the 3MF coordinates, for example TopLeft y plus BottomLeft y is 217.4 for all five
+top holes.
+
+- BottomLeft 1, 2, 3, 4, 5, 6, 7 (7 holes) take the screws that join BottomRight. BottomRight has 7
+  clearance holes of 3.2 mm on its joint face. Flat-head 6 mm.
+- BottomLeft 14 to 18 (5) pair with TopLeft's 5 clearance holes in its floor.
+- BottomLeft 21, 22, 25, 26 (4) pair with TopLeft's 4 side clearance holes.
+- BottomRight 3 to 6 (4) pair with TopRight's 4 side clearance holes.
+- BottomLeft 12 and 13 are 67.4 mm apart, the same spacing as the bracket's two 3.2 mm screw holes.
+  They probably hold the bracket with the two 12 mm screws.
+- BottomLeft 19, 20, 23, 24 sit on the 105 mm square of the 120 mm fan pattern, the same as
+  TopLeft's four 3.5 mm holes and the shroud's four 4.1 mm holes. Their screw is unknown.
+- Not paired: BottomLeft 8 to 11, BottomRight 1, 2 and 7 to 10, bracket 1 and 2. Candidates are the
+  board mounts.
+
+#### Finding the rest yourself
+
+The 9 missing inserts include the 4 feet and some board mounts. To find hardware spots on any
+part:
+
+- In PrusaSlicer, step through the layers or use the cut tool and look for round blind holes of
+  4.0 to 4.4 mm and 5 to 14 mm deep. A through hole of 3.0 to 3.5 mm is a screw clearance hole.
+- Every clearance hole has an insert somewhere in the mating part, at the mirrored position. Count
+  holes per part and match them to the screw list above: 21 for the top and joints, 16 for boards,
+  4 for feet, 4 for the fan, 2 for the bracket.
+- Round bosses standing off a wall are board mounts. Measure your boards' hole spacing and look for
+  that rectangle.
+- Slot-shaped or oblique holes are not inserts unless a screw needs to thread into them.
+- For a hole to be sure about, test-press one insert into a spare printed hole of the same size
+  first.
+
 ## Printing
 
 - Material: PETG for BottomLeft, BottomRight, TopLeft and FanShroud; PLA for TopRight, the
@@ -107,19 +232,100 @@ Things makers reported on the Printables page:
 - PLA softens and creeps rather than failing suddenly, so a warped PLA part is reprintable, not
   dangerous. Prusament PETG V0 is UL 94 V-0 certified, but only when printed on an MK3S+, MK4 or
   XL with Prusa's approved profiles, and it costs more; use it if a flame rating matters.
-- The upstream author printed on a CORE One at 0.25 mm and 15 percent infill. MK3S+ settings
-  here are unverified: slice first for filament totals (solid volume of all parts is 1.7 L, an
-  upper bound), and print supports where the upstream notes say they are needed.
 - Print the two bottom parts first and slide the power supply in before printing the rest.
 - Upstream errata: the 0.15 mm gap between the left and right bottom parts is tight (0.25 mm
   would be better), and the kWeld's bottom-left screw hole sits under the display.
 
+These settings assume importing the 3MF geometry only, not the project. The upstream projects
+target a CORE One, and their painted supports did not slice after the printer was changed to an
+MK3S+, so every setting is set by hand.
+
+- Upstream: CORE One, Prusament PLA for all parts, 0.25 mm BALANCED, 15 percent grid infill, 2
+  perimeters. 883 g and 20.7 h in total.
+- Here: 0.20mm QUALITY, 15 percent gyroid. The MK3S+ presets appear to have no 0.25 mm profile for
+  a 0.4 mm nozzle (unverified).
+- Perimeters: 4 on the parts that hold inserts (BottomLeft, BottomRight, bracket, FanShroud).
+  Ruthex lists a 1.6 mm minimum wall; four perimeters give about 1.8 mm. This is a recommendation,
+  not checked against the wall around each hole.
+- Build sheet: the textured sheet for everything. Prusa's PETG article highly recommends a textured
+  or satin sheet and warns that PETG on smooth PEI can adhere too strongly; on smooth PEI use a
+  glue stick. Upstream's smooth sheet was for PLA.
+- Orientation: as in the 3MF, which the images show. After import, check the bed face against the
+  images. If a part is flipped, rotate it to match, or the support regions below move.
+
+Supports. Upstream painted supports only on BottomLeft, TopLeft and TopRight. The other parts have
+no overhang over 35 degrees from horizontal that is more than about 17 mm across. Supports
+everywhere fills holes and slopes that print cleanly without. Instead:
+
+- Print Settings, Support material: tick Generate support material, then For support enforcers
+  only, which turns off Auto-generated supports. Style: Snug or Organic.
+- Right-click the part and add Support enforcer boxes over the regions in the images. Simple mode
+  has boxes. Needed regions are flat ceilings and bridges; optional ones are slopes of 35 to 45
+  degrees that print with a rough underside.
+- BottomRight, FanShroud, Nameplate, wrench, bracket: none. The bracket's slots are bridges of
+  2.2 mm; the nameplate's 2 mm ledges bridge.
+- BottomLeft: S1 is a flat 65 x 134 mm ceiling 14 mm above the bed. Needed. S2 optional.
+- TopLeft: S1 is an 86 x 2.6 mm strip across the top of the window, 104 mm up. Needed. S2 is the
+  large 35 to 45 degree slope on the bed side; upstream left it unsupported.
+- TopRight: S1 to S5 are five small ledges, 5 to 23 mm across. Needed. S6 and S7 are the angled
+  cover's two roofs, optional.
+- Clear support out of the insert holes before pressing inserts in.
+
+![TopLeft support regions](images/TopLeft.png)
+
+![TopRight support regions](images/TopRight.png)
+
+BottomLeft's regions are drawn in its insert image above. The regions come from measuring each
+mesh in the 3MF orientation. They are not checked in a slicer.
+
 ## Assembly and wiring
 
-Follow the upstream page for order. Notes that are easy to lose:
+Upstream has no assembly steps, and its photos are all exterior. The order below is derived from
+the insert pairings above, those photos, and Keenlab's manuals. Treat it as unconfirmed: dry-fit
+each joint before pressing inserts or tightening screws.
 
-- Seat heat-set inserts where the bottom parts join no deeper than flush; inserts pushed too far
-  block the power supply from sliding in and out.
+What the photos show: the left section is tall, with the fan shroud and fan stacked on top and side
+vents; the right section has the angled kWeld cover with the LCD, the dial and both electrode
+cables; the lit button and nameplate are on the front; the power supply enters from the rear; four
+feet screw into the base, two per half, and the left and right halves meet in a seam with flat-head
+screws along it.
+
+Order:
+
+1. Print BottomLeft and BottomRight and check the power supply slides in.
+2. Press in the inserts: BottomLeft, BottomRight and the bracket. Flush only.
+3. Mount the boards with the 16 button-head screws. The angled end holds the kWeld, probably on
+   BottomRight holes 7 to 10. The kCap and kSupply positions are not confirmed.
+4. Fit the kSupply into the bracket (below) and screw the bracket to BottomLeft holes 12 and 13
+   with the two 12 mm screws.
+5. Wire the boards, button and jack before closing. Route the cables, then join BottomLeft to
+   BottomRight with 7 flat-head screws through BottomRight into BottomLeft 1 to 7.
+6. Slide the power supply in from the rear.
+7. Fit TopLeft: 5 floor screws into BottomLeft 14 to 18 and 4 side screws into 21, 22, 25, 26.
+   Fit TopRight: 4 side screws into BottomRight 3 to 6.
+8. Fan: set the shroud on TopLeft, then fit the fan and grille with the four 30 mm screws and
+   washers. Where those screws thread in is not determined; see the shroud note above.
+9. Feet: four 10 mm screws and bumpers. The feet's insert holes were not found.
+10. Nameplate: cyanoacrylate gel, kept off the edges because the fumes discolour nearby plastic.
+
+### The kSupply bracket
+
+Geometry, measured on the mesh: a bar of 94 x 16 x 18 mm. One long face has two parallel slots, each
+about 83.5 mm long and 4 mm deep, 2.2 mm or a little more across, separated by a rib of about 2 mm.
+Two 3.2 mm screw holes run through the thick back, 67.4 mm apart, and two inserts sit in lugs 65 mm
+apart.
+
+The slots look like a card-edge guide: a 1.6 mm board edge slides in. Keenlab lists the kSupply as
+86 x 53 x 18 mm without heat sinks, and that it is "meant to be mounted directly on a specific 12V
+server power supply" (kSupply manual, "Operation guide"). Which slot to use is not determinable
+from the geometry. A single board needs one; the second may be an alternative height, or may exist
+for a different kSupply revision. To decide: measure your board's thickness and length, slide its
+edge into each slot, and with the power supply in place pick the position where the heat sinks clear
+the supply and the screw terminals stay reachable from the rear. The two lug inserts, 65 mm apart,
+may match the kSupply's own mounting holes; compare against your board.
+
+Notes that are easy to lose:
+
 - Check the HP power supply's connector blades against the pictures in the kSupply manual,
   "Usage with HSTNS-PR01", before connecting it. The manual warns that model names do not always
   match the layout and that a different layout can damage the supply and the kSupply.
