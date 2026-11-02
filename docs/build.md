@@ -77,8 +77,9 @@ Electrical and other:
   latching. Chosen: a stainless, IP67, latching, 1NO switch with a 5 to 24 V LED, 20 A contacts
   and a plug-in wire socket, 16 mm panel cut. The LED range covers the kSupply output (8.4 V or
   more). Colour is cosmetic. The listing gives an item length of 3.9 in; that likely includes the
-  plug and wires, but check the depth behind the front panel when test-fitting. That it switches
-  the enable line is inferred from the upstream notes, not confirmed.
+  plug and wires, but check the depth behind the front panel when test-fitting. For the
+  HSTNS-PR01 the kSupply manual ("Usage with HSTNS-PR01") enables the supply with one jumper or
+  a switch on the enable terminal.
 - [ ] Pedal jack Switchcraft 142AX and plug 750, or whatever matches your pedal's plug. Not yet
   checked.
 - [ ] 120 mm fan and grille. Your Corsair SP120 Elite is 12 V and 0.3 A, inside the kCap's 500 mA
@@ -106,17 +107,21 @@ Upstream does not say where the inserts go. These holes were found by slicing th
 from upstream, so treat them as measured but unconfirmed until test-fit. The parent model, Printables
 928957, lists 25 inserts; this remix lists 47.
 
-Hole sizes: 4.37 mm and 4.00 mm, mostly 5 to 8 mm deep, a few 13 to 14 mm. Ruthex's table for RX-M3x5.7 lists D1 4.6, D2 3.9,
-D3 4.0, L 5.7, W 1.6 without naming the columns; D3 as the hole size is inferred. BottomLeft 22 and 26 are only 5.0 mm deep and 4 and 5 are 5.8 mm, so a 5.7 mm insert
-will not sit flush in them: test-fit, or use the shorter RX-M3Sx4.0 there. Press an insert in
-flush with the surface, no deeper: inserts at the bottom-part joint pushed too far block the power
-supply from sliding in and out.
+Hole sizes: 4.37 mm and 4.00 mm. Most are 5 to 8 mm deep; BottomLeft 19, 20, 23 and 24 and the
+four angled BottomRight holes are 12.8 to 14.2 mm deep. Ruthex's table for RX-M3x5.7 lists D1 4.6,
+D2 3.9, D3 4.0, L 5.7, W 1.6 without naming the columns; D3 as the hole size is inferred.
+BottomLeft 22 and 26 are only 5.0 mm deep, so a 5.7 mm insert will not sit flush in them:
+test-fit, or use the shorter RX-M3Sx4.0 there. BottomLeft 4 and 5 are 5.8 mm deep, which leaves
+0.1 mm to spare. Press an insert in flush with the surface, no deeper, including in the deep
+holes: inserts at the bottom-part joint pushed too far block the power supply from sliding in and
+out.
 
 38 of the 47 are located: BottomLeft 26, BottomRight 10, bracket 2. The upstream hardware list
-implies 21 for the top and joints, 4 feet, 2 bracket, 16 boards and 4 fan. Located and paired to a
-screw: 20 of the 21 top and joint inserts, and the 2 bracket inserts. The other 16 located holes
-are board or fan candidates, listed under "Which screw goes where". Not found: 1 top or joint, the 4
-feet, and 4 board or fan inserts, 9 in all.
+implies 21 for the top and joints, 4 feet, 2 for the bracket screws, 16 boards and 4 fan. Located
+and paired to a screw: 20 of the 21 top and joint inserts, and BottomLeft 12 and 13, which take
+the bracket screws. The other 16 located holes, including the bracket's own 2, are board or fan
+candidates, listed under "Which screw goes where". Not found: 1 top or joint, the 4 feet, and 4
+board or fan inserts, 9 in all.
 
 The fan shroud's four 4.1 mm holes run through the part. Whether the fan screws thread into inserts
 there or into BottomLeft 19, 20, 23 and 24 is not determined.
@@ -215,7 +220,7 @@ part:
   4.0 to 4.4 mm and 5 to 14 mm deep. A through hole of 3.0 to 3.5 mm is a screw clearance hole.
 - Every clearance hole has an insert somewhere in the mating part, at the mirrored position. Count
   holes per part and match them to the screw list above: 21 for the top and joints, 16 for boards,
-  4 for feet, 4 for the fan, 2 for the bracket.
+  4 for feet, 4 for the fan, 2 for the bracket screws.
 - Round bosses standing off a wall are board mounts. Measure your boards' hole spacing and look for
   that rectangle.
 - Slot-shaped or oblique holes are not inserts unless a screw needs to thread into them.
@@ -237,12 +242,12 @@ part:
   would be better), and the kWeld's bottom-left screw hole sits under the display.
 
 These settings assume importing the 3MF geometry only, not the project. The upstream projects
-target a CORE One, and their painted supports did not slice after the printer was changed to an
-MK3S+, so every setting is set by hand.
+target a CORE One and their painted supports do not carry over to an MK3S+ profile, so set every
+setting by hand.
 
 - Upstream: CORE One, Prusament PLA for all parts, 0.25 mm BALANCED, 15 percent grid infill, 2
   perimeters. 883 g and 20.7 h in total.
-- Here: 0.20mm QUALITY, 15 percent gyroid. The MK3S+ presets appear to have no 0.25 mm profile for
+- Here: 0.20 mm QUALITY, 15 percent gyroid. The MK3S+ presets appear to have no 0.25 mm profile for
   a 0.4 mm nozzle (unverified).
 - Perimeters: 4 on the parts that hold inserts (BottomLeft, BottomRight, bracket, FanShroud).
   Ruthex lists a 1.6 mm minimum wall; four perimeters give about 1.8 mm. This is a recommendation,
@@ -296,11 +301,13 @@ Order:
 2. Press in the inserts: BottomLeft, BottomRight and the bracket. Flush only.
 3. Mount the boards with the 16 button-head screws. The angled end holds the kWeld, probably on
    BottomRight holes 7 to 10. The kCap and kSupply positions are not confirmed.
-4. Fit the kSupply into the bracket (below) and screw the bracket to BottomLeft holes 12 and 13
-   with the two 12 mm screws.
+4. With the power supply in its bay, plug the kSupply onto its blade, fit the board into the
+   bracket (below) and screw the bracket to BottomLeft holes 12 and 13 with the two 12 mm
+   screws. This is a dry fit until the blade layout is checked (notes below).
 5. Wire the boards, button and jack before closing. Route the cables, then join BottomLeft to
    BottomRight with 7 flat-head screws through BottomRight into BottomLeft 1 to 7.
-6. Slide the power supply in from the rear.
+6. If the power supply was pulled out for wiring, slide it fully in from the rear so its blade
+   seats in the kSupply socket.
 7. Fit TopLeft: 5 floor screws into BottomLeft 14 to 18 and 4 side screws into 21, 22, 25, 26.
    Fit TopRight: 4 side screws into BottomRight 3 to 6.
 8. Fan: set the shroud on TopLeft, then fit the fan and grille with the four 30 mm screws and
@@ -311,20 +318,24 @@ Order:
 ### The kSupply bracket
 
 Geometry, measured on the mesh: a bar of 94 x 16 x 18 mm. One long face has two parallel slots, each
-about 83.5 mm long and 4 mm deep, 2.2 mm or a little more across, separated by a rib of about 2 mm.
-Two 3.2 mm screw holes run through the thick back, 67.4 mm apart, and two inserts sit in lugs 65 mm
-apart.
+about 83.5 mm long, 4 mm deep and 2.25 mm across, with centres 4.8 mm apart and a rib of 2.5 mm
+between them. Two 3.2 mm screw holes run through the thick back, 67.4 mm apart, perpendicular to
+the board. Two inserts sit in lugs 65 mm apart; their holes open on the slot face and point along
+the slot depth, in the board's plane, so they cannot take screws through the kSupply's mounting
+holes.
 
-The slots look like a card-edge guide: a 1.6 mm board edge slides in. Keenlab lists the kSupply as
-86 x 53 x 18 mm without heat sinks, and that it is "meant to be mounted directly on a specific 12V
-server power supply" (kSupply manual, "Operation guide"). Which slot to use is not determinable
-from the geometry. A single board needs one; the second may be an alternative height, or may exist
-for a different kSupply revision. To decide: measure your board's thickness and length, slide its
-edge into each slot, and with the power supply in place pick the position where the heat sinks clear
-the supply and the screw terminals stay reachable from the rear. The two lug inserts, 65 mm apart,
-may match the kSupply's own mounting holes; compare against your board.
+The slots are a card-edge guide: a 1.6 mm board edge slides in. The kSupply plugs onto the power
+supply's blade and is "meant to be mounted directly on a specific 12V server power supply" (kSupply
+manual, "Operation guide"), so the blade sets the board's height and angle and the bracket only
+steadies it. The right slot is the one level with the blade. Why there are two is not known.
 
-Notes that are easy to lose:
+To choose: with the power supply in its bay and the kSupply plugged on, hold the bracket against
+BottomLeft 12 and 13 and see which slot takes the board edge without bending it. This needs no
+inserts. Keenlab lists the board as 86 x 53 x 18 mm without heat sinks. With a server supply the
+manual prefers the heat-sink fins horizontal. For the HSTNS-PR01 it gives 50 A continuous without
+heat sinks and 70 A with.
+
+### Notes that are easy to lose
 
 - Check the HP power supply's connector blades against the pictures in the kSupply manual,
   "Usage with HSTNS-PR01", before connecting it. The manual warns that model names do not always
