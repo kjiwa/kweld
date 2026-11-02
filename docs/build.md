@@ -107,17 +107,21 @@ Upstream does not say where the inserts go. These holes were found by slicing th
 from upstream, so treat them as measured but unconfirmed until test-fit. The parent model, Printables
 928957, lists 25 inserts; this remix lists 47.
 
-Hole sizes: 4.37 mm and 4.00 mm, mostly 5 to 8 mm deep, a few 13 to 14 mm. Ruthex's table for RX-M3x5.7 lists D1 4.6, D2 3.9,
-D3 4.0, L 5.7, W 1.6 without naming the columns; D3 as the hole size is inferred. BottomLeft 22 and 26 are only 5.0 mm deep and 4 and 5 are 5.8 mm, so a 5.7 mm insert
-will not sit flush in them: test-fit, or use the shorter RX-M3Sx4.0 there. Press an insert in
-flush with the surface, no deeper: inserts at the bottom-part joint pushed too far block the power
-supply from sliding in and out.
+Hole sizes: 4.37 mm and 4.00 mm. Most are 5 to 8 mm deep; BottomLeft 19, 20, 23 and 24 and the
+four angled BottomRight holes are 12.8 to 14.2 mm deep. Ruthex's table for RX-M3x5.7 lists D1 4.6,
+D2 3.9, D3 4.0, L 5.7, W 1.6 without naming the columns; D3 as the hole size is inferred.
+BottomLeft 22 and 26 are only 5.0 mm deep, so a 5.7 mm insert will not sit flush in them:
+test-fit, or use the shorter RX-M3Sx4.0 there. BottomLeft 4 and 5 are 5.8 mm deep, which leaves
+0.1 mm to spare. Press an insert in flush with the surface, no deeper, including in the deep
+holes: inserts at the bottom-part joint pushed too far block the power supply from sliding in and
+out.
 
 38 of the 47 are located: BottomLeft 26, BottomRight 10, bracket 2. The upstream hardware list
-implies 21 for the top and joints, 4 feet, 2 bracket, 16 boards and 4 fan. Located and paired to a
-screw: 20 of the 21 top and joint inserts, and BottomLeft 12 and 13, which hold the bracket. The other 16 located holes
-are board or fan candidates, listed under "Which screw goes where". Not found: 1 top or joint, the 4
-feet, and 4 board or fan inserts, 9 in all.
+implies 21 for the top and joints, 4 feet, 2 for the bracket screws, 16 boards and 4 fan. Located
+and paired to a screw: 20 of the 21 top and joint inserts, and BottomLeft 12 and 13, which take
+the bracket screws. The other 16 located holes, including the bracket's own 2, are board or fan
+candidates, listed under "Which screw goes where". Not found: 1 top or joint, the 4 feet, and 4
+board or fan inserts, 9 in all.
 
 The fan shroud's four 4.1 mm holes run through the part. Whether the fan screws thread into inserts
 there or into BottomLeft 19, 20, 23 and 24 is not determined.
@@ -216,7 +220,7 @@ part:
   4.0 to 4.4 mm and 5 to 14 mm deep. A through hole of 3.0 to 3.5 mm is a screw clearance hole.
 - Every clearance hole has an insert somewhere in the mating part, at the mirrored position. Count
   holes per part and match them to the screw list above: 21 for the top and joints, 16 for boards,
-  4 for feet, 4 for the fan, 2 for the bracket.
+  4 for feet, 4 for the fan, 2 for the bracket screws.
 - Round bosses standing off a wall are board mounts. Measure your boards' hole spacing and look for
   that rectangle.
 - Slot-shaped or oblique holes are not inserts unless a screw needs to thread into them.
@@ -238,12 +242,12 @@ part:
   would be better), and the kWeld's bottom-left screw hole sits under the display.
 
 These settings assume importing the 3MF geometry only, not the project. The upstream projects
-target a CORE One, and their painted supports did not slice after the printer was changed to an
-MK3S+, so every setting is set by hand.
+target a CORE One and their painted supports do not carry over to an MK3S+ profile, so set every
+setting by hand.
 
 - Upstream: CORE One, Prusament PLA for all parts, 0.25 mm BALANCED, 15 percent grid infill, 2
   perimeters. 883 g and 20.7 h in total.
-- Here: 0.20mm QUALITY, 15 percent gyroid. The MK3S+ presets appear to have no 0.25 mm profile for
+- Here: 0.20 mm QUALITY, 15 percent gyroid. The MK3S+ presets appear to have no 0.25 mm profile for
   a 0.4 mm nozzle (unverified).
 - Perimeters: 4 on the parts that hold inserts (BottomLeft, BottomRight, bracket, FanShroud).
   Ruthex lists a 1.6 mm minimum wall; four perimeters give about 1.8 mm. This is a recommendation,
@@ -331,7 +335,7 @@ inserts. Keenlab lists the board as 86 x 53 x 18 mm without heat sinks. With a s
 manual prefers the heat-sink fins horizontal. For the HSTNS-PR01 it gives 50 A continuous without
 heat sinks and 70 A with.
 
-Notes that are easy to lose:
+### Notes that are easy to lose
 
 - Check the HP power supply's connector blades against the pictures in the kSupply manual,
   "Usage with HSTNS-PR01", before connecting it. The manual warns that model names do not always
