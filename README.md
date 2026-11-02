@@ -23,7 +23,7 @@ maintain it after a long gap.
 - kWeld: the welder board. Weld input 4 to 30 V DC, 2000 A switch, up to 500 J per pulse.
 - kCap: ultracapacitor bank that the kWeld draws its pulse from.
 - kSupply: charges the kCap from a server power supply.
-- Server power supply: the HP HSTNS-PR01 family, 800 to 1000 W depending on mains voltage.
+- Server power supply: HP HSTNS-PR01 (HP 379124-001), 800 to 1000 W depending on mains voltage.
 - Foot pedal: triggers welds in manual mode.
 - kWeld firmware update tool (Keenlab calls it the programmer module): USB-serial adapter, used
   only to flash firmware.
