@@ -231,9 +231,9 @@ whenever the kSupply output is live, 8.4 to 8.5 V for a kCap r6, inside the LED'
 range. If it stays dark with the button latched, swap the two LED wires.
 
 Fuse the LED positive wire close to the bolt, with a 1 A fuse in an inline holder. If the thin
-LED wire shorts to ground, the kSupply can drive about 80 A through it, enough to overheat it;
-the fuse opens first. Fuse breaking capacity at this voltage is unverified; the listings for
-5 x 20 mm fuses do not state one.
+LED wire shorts to ground, the kSupply can drive about 80 A through it (kSupply manual,
+"Specifications"), enough to overheat it; the fuse is there to open first. Its breaking capacity
+at this voltage is unverified; the listings for 5 x 20 mm fuses do not state one.
 
 Wire. Both circuits carry milliamps, so use 22 AWG for both. The screw terminal takes 22 AWG at
 most. The harness that came with the button has a 14 AWG pair and a 22 AWG pair; the 14 AWG pair
