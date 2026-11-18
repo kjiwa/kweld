@@ -18,8 +18,10 @@ The kWeld picks its mode from the pedal at the moment it is connected to power:
 - Pedal pressed (or the jack shorted by having no plug): automatic mode. Touching the electrodes
   to the work triggers the pulse.
 
-Plug the pedal in, and keep it released, before applying power. With the jack empty (see
-[build.md](build.md)) the unit starts in automatic mode.
+Plug the pedal in, and keep it released, before pressing the power button. With the jack empty
+(see [build.md](build.md)) the unit starts in automatic mode.
+
+The power button latches. Its LED lights while the kSupply output is live.
 
 Keenlab operating manual, "Using the welder", "Using manual mode" and "Using automatic mode".
 Start in manual mode until the system is calibrated and trusted.
@@ -42,7 +44,7 @@ counterclockwise.
 Start at a low energy on scrap and empty cells and increase in steps, checking each weld with a
 pull test. The starting-energy table in the operating manual is not a recommendation.
 
-## Warnings screens
+## Warning screens
 
 - Overtemp: the power switch is above 70 C; wait.
 - Fuse: broken or unseated fuse; find the cause before replacing it.
@@ -50,8 +52,10 @@ pull test. The starting-energy table in the operating manual is not a recommenda
 
 ## Shutdown and storage
 
-The kCap holds charge for hours after power-off; its power LED is lit while the capacitors are
-above 2 V. Until it is out, do not reach into the case, and never short the kCap, bus bar or
+Press the power button again to release it. The server power supply stops and, with a kCap r4
+or later, the kSupply output falls to 0 V and the button LED goes out. That says nothing about
+the kCap, which holds charge for hours after power-off; its power LED is lit while the
+capacitors are above 2 V. Until it is out, do not reach into the case, and never short the kCap, bus bar or
 electrode terminals: a short draws a very large current.
 
 Keep the electrode cables away from any power source: they are the output of a switch.
