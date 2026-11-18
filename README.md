@@ -11,12 +11,12 @@ maintain it after a long gap.
 ## Status
 
 - Case: [Printables 1443318](https://www.printables.com/model/1443318) files are vendored
-  unmodified; printing on a Prusa MK3S+ is in progress.
-- System: assembled on the bench, never used. Calibration, first weld and the fan hookup are
-  still to do.
+  unmodified; printed on a Prusa MK3S+, with the heat-set inserts installed.
+- System: boards mounted in the case and the pedal jack wired, never used. The power button is
+  not wired yet; calibration, first weld and the fan hookup are still to do.
 - Boards: kWeld r3.3, kCap r6, kSupply r6; all covered by Keenlab's current manuals
   ([docs/maintenance.md](docs/maintenance.md)).
-- Not verified yet: the boot-screen firmware version, the pedal plug type, the fan connection.
+- Not verified yet: the boot-screen firmware version, the fan connection.
 
 ## The system
 
