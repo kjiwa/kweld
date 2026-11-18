@@ -230,9 +230,10 @@ stack, keeping the washer order the manual shows ("Assembly guide - cable kit").
 whenever the kSupply output is live, 8.4 to 8.5 V for a kCap r6, inside the LED's 5 to 24 V
 range. If it stays dark with the button latched, swap the two LED wires.
 
-Fuse the LED positive wire close to the bolt, with a 1 A fuse in an inline holder. The kSupply
-can source about 80 A, which a short in thin wire would draw. Fuse breaking capacity at this
-voltage is unverified; the listings for 5 x 20 mm fuses do not state one.
+Fuse the LED positive wire close to the bolt, with a 1 A fuse in an inline holder. If the thin
+LED wire shorts to ground, the kSupply can drive about 80 A through it, enough to overheat it;
+the fuse opens first. Fuse breaking capacity at this voltage is unverified; the listings for
+5 x 20 mm fuses do not state one.
 
 Wire. Both circuits carry milliamps, so use 22 AWG for both. The screw terminal takes 22 AWG at
 most. The harness that came with the button has a 14 AWG pair and a 22 AWG pair; the 14 AWG pair
