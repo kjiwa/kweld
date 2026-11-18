@@ -221,10 +221,11 @@ kSupply's green screw terminal. Its LED is a power indicator on the kSupply outp
 soldered to the kSupply.
 
 Contacts. The kSupply manual ("Usage with HSTNS-PR01") enables the supply with one jumper wire,
-or a switch in its place, across the two screws of the green terminal nearest the PSU connector.
-The terminal carries only enable signals, so the current is negligible and polarity does not
-matter. Remove the jumper if one is fitted and wire the button's contacts to those two screws.
-The button must be latching, so the supply stays enabled until it is pressed again.
+or a switch in its place, across the two screws of the green terminal that the manual's photo
+bridges, the ones nearest the PSU connector. The terminal carries only enable signals, so the
+current is negligible, and a bare jumper has no polarity, so neither does the switch. Remove
+the jumper if one is fitted and wire the button's contacts to those two screws. The button must
+be latching, so the supply stays enabled until it is pressed again.
 
 LED. The terminal block has no positive rail, so the LED goes to the kSupply's M6 output bolts,
 the ones that carry the cables to the kCap: LED positive on OUT+, LED negative on IN-/OUT-. Crimp
@@ -234,8 +235,8 @@ whenever the kSupply output is live, 8.4 to 8.5 V for a kCap r6, inside the LED'
 range. If it stays dark with the button latched, swap the two LED wires.
 
 Fuse the LED positive wire close to the bolt, with a 1 A fuse in an inline holder. The kSupply
-can source about 80 A, which a short in thin wire would draw. Fuse type is not critical: at
-under 9 V, any 1 A fuse clears the fault.
+can source about 80 A, which a short in thin wire would draw. Fuse breaking capacity at this
+voltage is unverified; the listings for 5 x 20 mm fuses do not state one.
 
 Wire. Both circuits carry milliamps, so use 22 AWG for both. The screw terminal takes 22 AWG at
 most. The harness that came with the button has a 14 AWG pair and a 22 AWG pair; the 14 AWG pair

@@ -52,9 +52,10 @@ pull test. The starting-energy table in the operating manual is not a recommenda
 
 ## Shutdown and storage
 
-Press the power button again to release it. The LED goes out and the server power supply stops.
-The kCap holds charge for hours after power-off; its power LED is lit while the capacitors are
-above 2 V. Until it is out, do not reach into the case, and never short the kCap, bus bar or
+Press the power button again to release it. The server power supply stops and, with a kCap r4
+or later, the kSupply output falls to 0 V and the button LED goes out. That says nothing about
+the kCap, which holds charge for hours after power-off; its power LED is lit while the
+capacitors are above 2 V. Until it is out, do not reach into the case, and never short the kCap, bus bar or
 electrode terminals: a short draws a very large current.
 
 Keep the electrode cables away from any power source: they are the output of a switch.
