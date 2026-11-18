@@ -8,16 +8,6 @@ Keenlab sells the boards as bare kits and publishes only per-board enclosures. T
 holds a printable case that houses the whole system, and the notes needed to build, use and
 maintain it after a long gap.
 
-## Status
-
-- Case: [Printables 1443318](https://www.printables.com/model/1443318) files are vendored
-  unmodified; printed on a Prusa MK3S+, with the heat-set inserts installed.
-- System: boards mounted in the case and the pedal jack wired, never used. The power button is
-  not wired yet; calibration, first weld and the fan hookup are still to do.
-- Boards: kWeld r3.3, kCap r6, kSupply r6; all covered by Keenlab's current manuals
-  ([docs/maintenance.md](docs/maintenance.md)).
-- Not verified yet: the boot-screen firmware version, the fan connection.
-
 ## The system
 
 - kWeld: the welder board. Weld input 4 to 30 V DC, 2000 A switch, up to 500 J per pulse.

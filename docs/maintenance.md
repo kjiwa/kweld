@@ -22,29 +22,27 @@ printf '%s  %s\n' "$(shasum -a 256 FILE | cut -d ' ' -f 1)" URL >> keenlab.manif
 
 Keep the manifest in step with the docs that cite manual revisions.
 
-State as of 2026-10-29: firmware r2.9 is current (the download is byte-identical to a copy from
-2023); Keenlab republished all four manuals on 2026-10-27 (kWeld assembly r6.0, kWeld operating
-r4.0, kSupply r2.0, kCap r3.0).
+The manifest records the accepted versions: firmware r2.9 and the manuals kWeld assembly r6.0,
+kWeld operating r4.0, kSupply r2.0 and kCap r3.0.
 
 ## Revisions
 
-Read the revision printed on each board and record it here. Keenlab's current documents cover:
+Read the revision printed on each board and compare it with what Keenlab's documents cover:
 
 - kWeld: hardware revisions 3 to 3.3 (assembly manual r6.0). Revision 2 differs; see the manual.
 - kCap: the manual was written for revision 4; current modules are revision 6, and the manual
   notes differences by revision.
 - kSupply: revisions 5 and 6.
 
-Owned (printed on each board; date code after the slash is year and month):
+This unit's boards (printed on each board; the date code after the slash is year and month):
 
 - kWeld r3.3 / 1810
 - kCap r6 / 2010: the current module, with Skeleton SkelCap capacitors.
 - kSupply r6 / 1907: adds an input overvoltage protector over r5.
 
-All three are covered by the current Keenlab manuals, so nothing is out of date and there is no
-upgrade to make. Hardware upgrades: none were found on the four Keenlab product pages as of
-2026-10-29. That is not evidence that none exist; ask Keenlab, or check the endless-sphere and
-EEVblog kWeld threads.
+A board outside the ranges above needs the manual for its revision. To look for hardware
+upgrades, read the four Keenlab product pages, ask Keenlab, or check the endless-sphere and
+EEVblog kWeld threads; absence from the product pages is not evidence that none exist.
 
 ## Firmware
 
@@ -59,8 +57,7 @@ what Keenlab currently links. To flash, follow the operating manual, "Updating t
 The printed case has no opening for this header, so flashing means taking the top off. Every
 joint uses heat-set inserts, so opening it repeatedly is fine; reprint any part that wears.
 
-The update adapter is stored loose for now. A holder inside the case is planned once the
-adapter's dimensions and free wall space near the header have been measured.
+The case has no holder for the update adapter.
 
 ## Reprinting
 

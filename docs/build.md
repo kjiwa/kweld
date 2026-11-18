@@ -58,20 +58,20 @@ Counts are the upstream author's; the upstream page is authoritative. Tick what 
 
 Hardware, all M3. The totals match: 47 screws and 47 inserts.
 
-- [x] Heat-set inserts, 47: Ruthex RX-M3x5.7 (4.6 mm outer diameter, 5.7 mm long). The upstream
-  link, ASIN B08BCRZZS3, was this part but now opens a 1/4-20 insert listing; neither M3 option in
-  its dropdown is this insert. RX-M3Sx4.0 has the same diameter but is 4.0 mm long, so it grips
+- [ ] Heat-set inserts, 47: Ruthex RX-M3x5.7 (4.6 mm outer diameter, 5.7 mm long). The upstream
+  link, ASIN B08BCRZZS3, opens a 1/4-20 insert listing, and neither M3 option in its dropdown is
+  this insert. RX-M3Sx4.0 has the same diameter but is 4.0 mm long, so it grips
   less thread. RX-M3x5x4 (VORON) is 5.0 mm across, too wide for the 4.0 mm holes.
 - [ ] Flat-head, 16 x 6 mm (top and left/right joint).
 - [ ] Flat-head, 5 x 8 mm (left side).
 - [ ] Flat-head, 4 x 10 mm (feet).
 - [ ] Flat-head, 2 x 12 mm (kSupply bracket).
-- [x] Button-head, 16 x 6 mm (boards to case).
+- [ ] Button-head, 16 x 6 mm (boards to case).
 - [ ] Socket-head, 4 x 30 mm, with 4 washers (fan and grille).
 
 Electrical and other:
 
-- [x] Lit pushbutton switch, 16 mm. The case hole is 16.5 mm and the printed wrench fits a nut
+- [ ] Lit pushbutton switch, 16 mm. The case hole is 16.5 mm and the printed wrench fits a nut
   of about 19 mm across flats, so buy the 16 mm size, not 19 or 22 mm. It switches the kSupply's
   PSU enable line, which the kSupply manual describes as a jumper or a switch, so it must be
   latching. Chosen: a stainless, IP67, latching, 1NO switch with a 5 to 24 V LED, 20 A contacts
@@ -79,8 +79,8 @@ Electrical and other:
   more). Colour is cosmetic. The listing gives an item length of 3.9 in; that likely includes the
   plug and wires, but check the depth behind the front panel when test-fitting. Wiring:
   [Power button](#power-button).
-- [x] Pedal jack Switchcraft 142AX and plug 750, or whatever matches your pedal's plug.
-- [ ] 120 mm fan and grille. The Corsair SP120 Elite on hand is 12 V and 0.3 A, inside the kCap's 500 mA
+- [ ] Pedal jack Switchcraft 142AX and plug 750, or whatever matches your pedal's plug.
+- [ ] 120 mm fan and grille. A Corsair SP120 Elite is 12 V and 0.3 A, inside the kCap's 500 mA
   limit. It has a 4-pin PWM plug and the kCap fan header looks like a small 3-pin one in the
   maker's photo; check the pitch and whether your kCap kit included a fan cable.
 - [ ] Four rubber feet (upstream: Keystone 722).
@@ -135,8 +135,8 @@ setting by hand.
 - Build sheet: the textured sheet for everything. Prusa's PETG article highly recommends a textured
   or satin sheet and warns that PETG on smooth PEI can adhere too strongly; on smooth PEI use a
   glue stick. Upstream's smooth sheet was for PLA.
-- Orientation: as in the 3MF. After import, check the bed face of TopLeft and TopRight against
-  the images below. If a part is flipped, rotate it to match, or the support regions move.
+- Orientation: as in the 3MF, z up with the bed at z = 0. The support regions below are given in
+  that orientation; if a part imports flipped, rotate it to match.
 
 Supports. Upstream painted supports only on BottomLeft, TopLeft and TopRight. The other parts have
 no overhang over 35 degrees from horizontal that is more than about 17 mm across. Supports
@@ -144,21 +144,17 @@ everywhere fills holes and slopes that print cleanly without. Instead:
 
 - Print Settings, Support material: tick Generate support material, then For support enforcers
   only, which turns off Auto-generated supports. Style: Snug or Organic.
-- Right-click the part and add Support enforcer boxes over the regions described below. Simple mode
+- Right-click the part and add Support enforcer boxes over the regions listed below. Simple mode
   has boxes. Needed regions are flat ceilings and bridges; optional ones are slopes of 35 to 45
   degrees that print with a rough underside.
 - BottomRight, FanShroud, Nameplate, wrench, bracket: none. The bracket's slots are bridges of
   2.2 mm; the nameplate's 2 mm ledges bridge.
 - BottomLeft: a flat 65 x 134 mm ceiling 14 mm above the bed. Needed.
-- TopLeft: S1 is an 86 x 2.6 mm strip across the top of the window, 104 mm up. Needed. S2 is the
-  large 35 to 45 degree slope on the bed side; upstream left it unsupported.
-- TopRight: S1 to S5 are five small ledges, 5 to 23 mm across. Needed. S6 and S7 are the angled
-  cover's two roofs, optional.
+- TopLeft: an 86 x 2.6 mm strip across the top of the window, 104 mm up. Needed. The large 35 to
+  45 degree slope on the bed side is optional; upstream left it unsupported.
+- TopRight: five small ledges, 5 to 23 mm across. Needed. The angled cover's two roofs are
+  optional. Find the ledges in the sliced layer preview.
 - Clear support out of the insert holes before pressing inserts in.
-
-![TopLeft support regions](images/TopLeft.png)
-
-![TopRight support regions](images/TopRight.png)
 
 The regions come from measuring each mesh in the 3MF orientation. They are not checked in a
 slicer.
